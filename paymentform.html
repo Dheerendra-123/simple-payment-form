@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment form</title>
+    <link rel="stylesheet" href="style/payment.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+    <div class="container">
+    <form action="">
+        <h1 class="main_heading">Payment Form</h1>
+        <p>Required fields are followe by *</p>
+        <h2 class="h2">Contact Information</h2>
+        <p>Name *:<input type="text" name="name" required placeholder="Om Pandey"></p>
+        <fieldset>
+            <legend>Gender *</legend>
+        <p>
+            Male <input type="radio" name="gender" id="male"> Female <input type="radio" name="gender" id="female"> Other <input type="radio" name="gender" id="other">
+        </p>
+    </fieldset>
+    <p>Address: <textarea name="address" id="address" cols="100" rows="8" placeholder="Enter your address"></textarea></p>
+    <p>Email *: <input type="email" name="email" id="email" required placeholder="pandey@gmail.com"></p>
+    <p>Pincode *: <input type="number" name="pincode" id="pincode" required placeholder="123456"></p>
+    <h2 class="h2">Payemnt Information</h2>
+    <p>Card Type:
+        <select name="card_type" id="card_type" required>
+            <option value="-select a Card Type-"></option>
+            <option value="visa">Visa</option>
+            <option value="visa">Debit Card</option>
+            <option value="visa">Master Card</option>
+            <option value="visa">Rupay</option>
+        </select>
+    </p>
+    <P> Card number *:
+        <input type="number" name="card number" id="cardnumber" required placeholder="1111-222-3333-444">
+    </P> 
+    <p>
+        Expiration Date *:
+        <input type="date" name="expiration date" id="expiration date" required>
+    </p>
+    <p>CVV *:
+        <input type="password" name="cvv" id="cvv" required>
+    </p>
+    <div class="g-recaptcha" data-sitekey="Your site key goes here"></div>
+    <input type="submit" value="Pay Now">
+</form>
+</div>
+</body>
+</html>
